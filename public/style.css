@@ -1,0 +1,164 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f4f6fb;
+  color: #1d1f29;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1120px, 100% - 32px);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: linear-gradient(135deg, #3c6df0, #5fa0ff);
+  color: white;
+  padding: 36px 0;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.site-header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.poll-card {
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 24px 45px rgba(36, 52, 91, 0.08);
+  margin: 24px 0;
+  padding: 28px;
+}
+
+.poll-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+.poll-card p {
+  margin: 0 0 18px;
+  color: #5a6078;
+}
+
+.options-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.options-list li {
+  margin-bottom: 14px;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #f8faff;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.option-label:hover {
+  border-color: #dbe6ff;
+}
+
+.option-label input {
+  accent-color: #3c6df0;
+}
+
+.option-text {
+  font-weight: 600;
+}
+
+.vote-button {
+  display: inline-flex;
+  margin-top: 16px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background: #3c6df0;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.vote-button:hover {
+  transform: translateY(-1px);
+  background: #2d55c9;
+}
+
+.results {
+  margin-top: 22px;
+  display: grid;
+  gap: 14px;
+}
+
+.result-row {
+  display: grid;
+  gap: 10px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.bar {
+  width: 100%;
+  height: 16px;
+  border-radius: 999px;
+  background: #e7efff;
+  overflow: hidden;
+}
+
+.bar-inner {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3c6df0, #74b4ff);
+}
+
+.message {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #eef6ff;
+  color: #2c4b8a;
+}
+
+.footer {
+  padding: 24px 0 40px;
+  text-align: center;
+  color: #6c738c;
+}
+
+@media (max-width: 640px) {
+  .poll-card {
+    padding: 20px;
+  }
+
+  .vote-button {
+    width: 100%;
+  }
+}
